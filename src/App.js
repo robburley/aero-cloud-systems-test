@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {connect} from 'react-redux';
+import Hotels from './components/Hotels'
 
 class App extends Component {
     render() {
@@ -13,7 +14,7 @@ class App extends Component {
                 </nav>
 
                 <div className="container mt-5">
-                    Components here
+                    <Hotels/>
                 </div>
             </div>
         );
