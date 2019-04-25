@@ -31,6 +31,24 @@ it('displays 5 stars selected', () => {
 });
 
 it('displays 0 facility filters', () => {
-    expect(wrapper.find('.facility-filter > .btn-primary').length).toEqual(0)
+    expect(wrapper.find('.facility-filter.btn-outline-secondary').length).toEqual(3)
 });
+
+it('allows facilities to be selected', () => {
+    const firstElement = wrapper.find('.facility-filter.btn-outline-secondary').first();
+
+    firstElement.simulate('click');
+
+    expect(wrapper.find('.facility-filter.btn-primary').length).toEqual(1)
+});
+
+it('allows star to be selected', () => {
+    const firstElement = wrapper.find('.filter-star > .text-secondary').first();
+
+    firstElement.simulate('click');
+
+    expect(wrapper.find('.filter-star > .text-warning').length).toEqual(1)
+});
+
+
 
