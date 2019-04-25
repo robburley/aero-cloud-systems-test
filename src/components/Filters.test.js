@@ -25,3 +25,12 @@ it('displays 5 stars', () => {
 it('displays 3 facility filters', () => {
     expect(wrapper.find('.facility-filter').length).toEqual(3)
 });
+
+it('displays 5 stars selected', () => {
+    expect(wrapper.find('.filter-star > .text-warning').length).toEqual(5)
+});
+
+it('displays 0 facility filters', () => {
+    expect(wrapper.find('.facility-filter > .btn-primary').length).toEqual(0)
+});
+
