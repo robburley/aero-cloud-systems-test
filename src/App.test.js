@@ -14,18 +14,3 @@ it('renders without crashing', () => {
     );
     ReactDOM.unmountComponentAtNode(div);
 });
-
-it('should add data to store when mounted', () => {
-
-    const div = document.createElement('div');
-
-    ReactDOM.render(
-        <Provider store={store}>
-            <App/>
-        </Provider>, div
-    );
-
-    console.log(this.props.hotels)
-
-    ReactDOM.unmountComponentAtNode(div);
-});
