@@ -19,7 +19,7 @@ class Filters extends Component {
                         stars.map((val, key) => (
                             <span className={'filter-star'} key={key}>
                                 <FontAwesomeIcon icon="star"
-                                                 className={'filter-star fa-2x'}
+                                                 className={'fa-2x'}
 
                                 />
                             </span>
