@@ -7,6 +7,10 @@ const createReducer = (initialState, handlers) => {
     };
 };
 
-const rootReducer = combineReducers({});
+const hotelReducers = createReducer(hotelStoreConfig.initialState, hotelStoreConfig.actions)
+
+const rootReducer = combineReducers({
+    hotels: hotelReducers,
+});
 
 export default createStore(rootReducer, {}, applyMiddleware(thunk));
