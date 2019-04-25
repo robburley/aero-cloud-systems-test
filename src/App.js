@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {connect} from 'react-redux';
 import Hotels from './components/Hotels'
+import Filters from './components/Filters'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 
@@ -18,6 +19,8 @@ class App extends Component {
                 </nav>
 
                 <div className="container mt-5">
+                    <Filters/>
+                    
                     <Hotels/>
                 </div>
             </div>
