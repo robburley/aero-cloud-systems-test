@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './App.css';
 import {connect} from 'react-redux';
 import Hotels from './components/Hotels'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faStar} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStar)
 
 class App extends Component {
     render() {

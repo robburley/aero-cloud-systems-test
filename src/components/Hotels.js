@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 class Hotels extends Component {
     render() {
@@ -28,7 +29,12 @@ class Hotels extends Component {
                 <tr key={i}>
                     <td>{hotel.name}</td>
                     <td>
-                        {hotel.starRating}
+                        {
+                            this.renderStars(hotel.starRating)
+                                .map((stars, key) => (
+                                    stars
+                                ))
+                        }
                     </td>
                     <td>
                         {
@@ -39,6 +45,22 @@ class Hotels extends Component {
                     </td>
                 </tr>
             ))
+    }
+
+
+    renderStars(count) {
+        let stars = [];
+
+        for (let i = 0; i < count; i++) {
+            stars.push(
+                <FontAwesomeIcon icon="star"
+                                 className={'text-warning fa-2x'}
+                                 key={i}
+                />
+            )
+        }
+
+        return stars
     }
 }
 
