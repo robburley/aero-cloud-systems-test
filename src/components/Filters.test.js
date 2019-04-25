@@ -43,7 +43,7 @@ it('allows facilities to be selected', () => {
 });
 
 it('allows star to be selected', () => {
-    const firstElement = wrapper.find('.filter-star > .text-secondary').first();
+    const firstElement = wrapper.find('.filter-star > .text-warning').first();
 
     firstElement.simulate('click');
 
