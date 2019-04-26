@@ -24,7 +24,18 @@ class Hotels extends Component {
     }
 
     filteredData() {
+        let filters = this.props.filters;
+
         return this.props.hotels
+            .filter(function (hotel) {
+                let inStarRating = hotel.starRating <= filters.stars;
+
+                let inFacilities = filters.facilities.length
+                    ? filters.facilities.some(r => hotel.facilities.includes(r))
+                    : true;
+
+                return inStarRating && inFacilities
+            })
             .map((hotel, i) => (
                 <tr key={i}>
                     <td>{hotel.name}</td>
