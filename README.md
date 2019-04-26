@@ -1,10 +1,10 @@
-##Aero Cloud Systems Test
+## Aero Cloud Systems Test
 
 This project is to demonstrate the use of React in a simple search page with a basic filter.
 
 Note: The author has not used React before this point. 5 Hours of reading and knowledge of Vue Js has made this possible. There will not be best practices or pattens but hopefully this shows some aptitude this learning.
 
-##Instructions
+## Instructions
 
 In the project directory, you can run:
 
